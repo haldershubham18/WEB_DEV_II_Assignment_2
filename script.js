@@ -1,4 +1,4 @@
-const API_KEY = "a913a939ae3edeed54ea030b08f973e0"
+const API_KEY = ""
 
 const form = document.querySelector("#form")
 const city = document.querySelector("#city")           
