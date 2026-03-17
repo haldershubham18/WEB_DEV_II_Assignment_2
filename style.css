@@ -1,184 +1,142 @@
-/* Global reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f0f2f5;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px 20px;
-  min-height: 100vh;
+    background-color: #0f1e45;
+    color: #e0e8ff;
+    font-family: Arial, sans-serif;
+    padding: 24px;
 }
 
-/* Main heading */
 h1 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: #1e293b;
-  margin-bottom: 30px;
-  letter-spacing: -0.5px;
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
 }
 
-/* Card containers */
+.top-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
 .weatherForm,
-.info,
-.console {
-  background: white;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-  padding: 25px;
-  margin-bottom: 25px;
-  width: 100%;
-  max-width: 600px;
-  border: 1px solid #e9eef2;
+.weatherInfo,
+.consoleBox {
+    background-color: #1b2d5e;
+    border-radius: 10px;
+    padding: 20px;
 }
 
-/* Section headings */
+.weatherForm {
+    width: 45%;
+}
+
+.weatherInfo {
+    width: 55%;
+}
+
 h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #0f172a;
-  margin-bottom: 18px;
-  border-bottom: 2px solid #e2e8f0;
-  padding-bottom: 10px;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    color: #c8d5f5;
 }
 
-/* Search form */
 #form {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 #city {
-  flex: 1;
-  padding: 12px 16px;
-  border: 2px solid #e2e8f0;
-  border-radius: 40px;
-  font-size: 1rem;
-  transition: all 0.2s;
-  background: #f8fafc;
-}
-
-#city:focus {
-  outline: none;
-  border-color: #3b82f6;
-  background: white;
-  box-shadow: 0 0 0 3px rgba(59,130,246,0.1);
+    flex: 1;
+    padding: 9px 14px;
+    border-radius: 6px;
+    border: none;
+    font-size: 0.9rem;
+    outline: none;
 }
 
 #search {
-  padding: 12px 28px;
-  background: #3b82f6;
-  color: white;
-  border: none;
-  border-radius: 40px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s;
-  box-shadow: 0 4px 6px rgba(59,130,246,0.2);
+    padding: 9px 18px;
+    background-color: #e8581a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 #search:hover {
-  background: #2563eb;
+    background-color: #cf4c14;
 }
 
-/* Search history buttons */
 .historyBtn {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 .historyBtn button {
-  padding: 8px 18px;
-  background: #f1f5f9;
-  border: 1px solid #cbd5e1;
-  border-radius: 30px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: #334155;
-  cursor: pointer;
-  transition: all 0.2s;
+    padding: 6px 14px;
+    background-color: #e8581a;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    cursor: pointer;
 }
 
 .historyBtn button:hover {
-  background: #e2e8f0;
-  border-color: #94a3b8;
+    background-color: #cf4c14;
 }
 
-/* Weather info display – key-value pairs */
 .info p {
-  margin: 12px 0;
-  font-size: 1.1rem;
-  color: #0f172a;
-  display: flex;
-  align-items: baseline;
-  border-bottom: 1px dashed #e2e8f0;
-  padding-bottom: 8px;
+    padding: 10px 14px;
+    border-left: 3px solid #e8581a;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
 }
 
-.info p:last-child {
-  border-bottom: none;
-}
-
-/* Style for labels (City, Temp, etc.) – you can add <strong> in HTML */
-.info p strong {
-  width: 100px;
-  font-weight: 600;
-  color: #475569;
-}
-
-/* Console / event log */
 .console {
-  background: #1e293b;
-  color: #e2e8f0;
-  font-family: 'Fira Code', 'Courier New', monospace;
-  border: 1px solid #334155;
+    background-color: #0d1830;
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.82rem;
+    min-height: 60px;
 }
 
-.console h3 {
-  color: #f1f5f9;
-  border-bottom-color: #475569;
+.log-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #c8d5f5;
+    line-height: 1.8;
 }
 
-.console p, .console ul {
-  margin: 8px 0;
-  line-height: 1.6;
+.log-line::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #4a90e2;
+    border-radius: 2px;
+    flex-shrink: 0;
 }
 
-.console ul {
-  padding-left: 25px;
-  list-style-type: none;
-}
+@media (max-width: 600px) {
+    .top-row {
+        flex-direction: column;
+    }
 
-.console li {
-  margin: 5px 0;
-  position: relative;
-}
-
-.console li::before {
-  content: "•";
-  color: #94a3b8;
-  font-weight: bold;
-  position: absolute;
-  left: -18px;
-}
-
-/* Indent for nested logs (like microtasks) */
-.console li ul {
-  padding-left: 30px;
-  margin-top: 5px;
-}
-
-.console li ul li::before {
-  content: "–";
-  color: #64748b;
+    .weatherForm,
+    .weatherInfo {
+        width: 100%;
+    }
 }
